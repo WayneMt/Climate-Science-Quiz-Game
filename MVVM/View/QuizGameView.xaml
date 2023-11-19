@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="Climate_Science_Quiz_Game.MVVM.View.QuizGameView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Climate_Science_Quiz_Game.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <Border Background="GhostWhite">
+        <Grid ButtonBase.Click="selectAnswerEvent">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.05*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="0.05*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.05*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Column="1" Grid.Row="1">
+                <Image x:Name="quizClues" Height="220" Stretch="Fill" Grid.Column="1"/>
+            </StackPanel>
+
+            <StackPanel Grid.Column="1" Grid.Row="2">
+                <TextBlock Text="Question???"
+                           Name="questionShow"
+                           Foreground="Black"
+                           FontFamily="/Fonts/#Ldfcomicsans"
+                           FontSize="25"
+                           HorizontalAlignment="Center"/>
+            </StackPanel>
+
+            <Button Name="btn1TL" Content="button1" Tag="1" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="300" Height="75" Margin="20,50,0,0"/>
+            <Button Name="btn2TR" Content="button2" Tag="2" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Width="300" Height="75" Margin="0,50,20,0"/>
+            <Button Name="btn3BL" Content="button3" Tag="3"  Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="300" Height="75" Margin="20,50,0,10"/>
+            <Button Name="btn4BR" Content="button4" Tag="4"  Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="300" Height="75" Margin="0,50,20,10"/>
+        </Grid>
+    </Border>
+</UserControl>

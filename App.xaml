@@ -1,0 +1,24 @@
+﻿<Application x:Class="Climate_Science_Quiz_Game.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Climate_Science_Quiz_Game"
+             xmlns:viewModel="clr-namespace:Climate_Science_Quiz_Game.MVVM.ViewModel"
+             xmlns:view="clr-namespace:Climate_Science_Quiz_Game.MVVM.View"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <!--<ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Theme/MenuButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/TextBoxTheme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>-->
+
+            <DataTemplate DataType="{x:Type viewModel:MainMenuViewModel}">
+                <view:MainMenuView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:QuizGameViewModel}">
+                <view:QuizGameView/>
+            </DataTemplate>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
